@@ -1,0 +1,21 @@
+{
+  "name": "android-server",
+  "version": "1.0.0",
+  "description": "안드로이드 클라이언트를 위한 API 서버 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wkimdev@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.2",
+    "multer": "^1.4.4",
+    "mysql": "^2.18.1",
+    "parse-multipart": "^1.0.4",
+    "pm2": "^5.2.0"
+  }
+}
