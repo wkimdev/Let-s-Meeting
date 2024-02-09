@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 모바일단말에서 mediaquery 적용되도록 하기 위해 선언함 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./public/css/style.desktop.css">
+  <!-- test sample css -->
+  <link rel="stylesheet" href="./public/css/style.css">
+
+  <style>
+    .container {
+      width: 100%;
+      height: 100vh;
+      background: #181b1f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .user {
+      width: 25%;
+      height: 22em;
+      flex: 1 1 calc(25% - 2px);
+      margin: 2px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      background: #22272c;
+    }
+  </style>
+</head>
+<body>
+  <!-- 최대5명까지 동적으로 grid모양 변경 -->
+  <main class="enterRoom">
+
+    <div id="welcome">
+      <form>
+        <h1>회의참여</h1>
+        <input id="roomName" type="text" required placeholder="회의번호">
+        <input id="nickname" type="text" required placeholder="닉네임">
+          <button>회의 들어가기</button></form>
+    </div>
+  </main>
+  
+  <main class="meetingMain">
+    
+    <!-- 비디오회의 영역 -->
+    <div class="container">
+      <div class="user">
+      </div>
+  
+      <div class="user">
+      </div>
+
+    </div>
+    
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./public/js/mobile.js"></script>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setting.ChangeNameActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="이름변경"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_saveName"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:backgroundTint="@color/gray"
+        android:enabled="false"
+        android:text="저장"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="#E4E5E8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <TextView
+        android:id="@+id/txt_title2"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="현재 이름"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <TextView
+        android:id="@+id/txt_title5"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="변경할 이름"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_currentName" />
+
+    <EditText
+        android:id="@+id/txt_currentName"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:text="현재이름"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2" />
+
+    <EditText
+        android:id="@+id/editTxt_changeName"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="변경할 이름"
+        android:textSize="22sp"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title5" />
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="88dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="296dp"
+        app:SpinKit_Color="#F8FFFE"
+        android:background="#90000832"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

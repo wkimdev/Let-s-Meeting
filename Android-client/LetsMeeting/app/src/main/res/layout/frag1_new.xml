@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회의참여"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_enterMeeting"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="80dp"
+        android:background="@color/orange_light"
+        app:layout_constraintBottom_toBottomOf="@+id/img_newMeeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:srcCompat="@drawable/ic_add_box" />
+
+    <ImageView
+        android:id="@+id/img_newMeeting"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/green_light"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/img_enterMeeting"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:srcCompat="@drawable/ic_videocam" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="새회의"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/img_newMeeting"
+        app:layout_constraintTop_toBottomOf="@+id/img_newMeeting" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="77dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회의참여"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="@+id/img_enterMeeting"
+        app:layout_constraintTop_toBottomOf="@+id/img_enterMeeting" />
+
+    <LinearLayout
+        android:id="@+id/home_today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextClock
+            android:id="@+id/txt_currentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format12Hour="yyyy년 MM월 dd일 E"
+            android:textSize="24sp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal" />
+
+        <TextClock android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="a hh:mm"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home_today"
+        android:layout_marginTop="150dp"
+        />
+
+
+    <!-- 오늘의 회의 리스트 스크롤뷰 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="285dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_today">
+
+        <!--오늘 회의 리스트-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/txt_todayMeeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_roundb"
+                android:textColor="@color/black"
+                android:background="#ECECEC"
+                android:text="오늘 회의"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_TodayMeetingList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/meeting_item_today"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!--회의가 없을 경우 -->
+    <LinearLayout
+        android:id="@+id/home_emptyMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/home_today"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/app_icon"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/nanum_square_roundr"
+            android:textSize="24dp"
+            android:text="렛츠미팅과 함께 \n빠르고 쉽게 회의를 시작해보세요!"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

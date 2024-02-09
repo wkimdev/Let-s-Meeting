@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".join.AgreementActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입화면"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_title2"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입전 약관에 동의해주세요"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/join_layout_5_check_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="이용약관동의 [필수]">
+            </androidx.appcompat.widget.AppCompatCheckBox>
+
+            <Button
+                android:id="@+id/join_layout_5_btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/green_primary"
+                android:gravity="center"
+                android:text="약관보기" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:padding="3dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/join_layout_5_check_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="개인정보취급약관 동의 [필수]">
+
+
+            </androidx.appcompat.widget.AppCompatCheckBox>
+
+
+            <Button
+                android:id="@+id/join_layout_5_btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/green_primary"
+                android:gravity="center"
+                android:text="약관보기" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray">
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="3dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/join_layout_5_check_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="3dp"
+                android:text="모두 동의">
+
+            </androidx.appcompat.widget.AppCompatCheckBox>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="324dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:enabled="false"
+            android:backgroundTint="@color/gray"
+            android:text="가입" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

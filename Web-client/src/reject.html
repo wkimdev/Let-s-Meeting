@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Meeting</title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="../public/css/style.home.css" />
+
+</head>
+<body>
+  <!--회의준비화면-->
+  <div class="uk-container-expand">
+    <!--네비게이션바-->
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="#">
+          <img src="./public/image/letsmeeing_logo.png" alt="">&nbsp;&nbsp; Let's Meeting
+        </a>
+      </div>
+
+      <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav login__not">
+          </ul>
+
+          <ul class="uk-navbar-nav">
+
+          </ul>
+      </div>
+
+    </nav>
+
+    <!--홈메인 화면-->
+    <div class="uk-container">
+
+      <div class="uk-position-center">
+        <div class="uk-flex uk-flex-center" style="margin-bottom: 0px">
+          <!-- 오른쪽 -->
+          <div class="prepare_text">
+
+            <h1 class="uk-heading-line uk-text-center"><span>🎤 회의에 참여할 수 있는 인원이 초과되었습니다.</span></h1>
+            <h3 class="uk-heading-line uk-text-center">홈으로 이동합니다.</h3>
+            
+            <div class="uk-flex uk-flex-column">
+
+              <p uk-margin>
+                <span uk-spinner="ratio: 4.5"></span>
+              </p>
+
+            </div>
+            
+          </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+  </div>
+
+
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+</body>
+<script src="../public/js/reject.js"></script>
+</html>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/scrollView_join"
+    tools:context=".join.JoinActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입화면"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_agreementText2"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="비밀번호는 아래 규칙을 따라 주세요"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_check_password" />
+
+    <TextView
+        android:id="@+id/txt_check1"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="8자 이상"
+        android:textColor="#818080"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_agreementText2" />
+
+    <TextView
+        android:id="@+id/txt_check2"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="문자(a,b,c..),숫자(1,2,3..)1개 이상 포함"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_check1" />
+
+
+    <EditText
+        android:id="@+id/editTxt_name"
+        android:layout_width="378dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="이름 작성"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2" />
+
+    <EditText
+        android:id="@+id/editTxt_password"
+        android:layout_width="386dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title3" />
+
+    <EditText
+        android:id="@+id/editTxt_check_password"
+        android:layout_width="382dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="45dp"
+        android:ems="10"
+        android:hint="비밀번호 확인"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_password" />
+
+    <TextView
+        android:id="@+id/txt_password_match"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="비밀번호가 일치합니다."
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_check_password" />
+
+    <TextView
+        android:id="@+id/txt_password_not_match"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="비밀번호가 일치하지 않습니다"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_check_password" />
+
+    <TextView
+        android:id="@+id/txt_joinEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입이메일 : text@naver.com"
+        android:textColor="@color/green_dark"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <TextView
+        android:id="@+id/txt_title2"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="이름을 입력해주세요"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_joinEmail" />
+
+    <TextView
+        android:id="@+id/txt_title3"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="비밀번호를 입력해주세요"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_name" />
+
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="211dp"-->
+<!--        android:layout_height="59dp"-->
+<!--        android:layout_marginStart="100dp"-->
+<!--        android:layout_marginEnd="100dp"-->
+<!--        android:layout_marginBottom="28dp"-->
+<!--        android:text="가입하기"-->
+<!--        android:textSize="32sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <TextView
+        android:id="@+id/txt_agreementText"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="나는 가입함으로써 렛츠미팅의 \n 개인정보정책 및 이용약관에 동의합니다."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_check2" />
+
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="324dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/gray"
+        android:enabled="false"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_agreementText" />
+
+    <TextView
+        android:id="@+id/txt_nameCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="이름을 입력해주세요"
+        android:textColor="@color/red"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

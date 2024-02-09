@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--선택했을때 아이콘: 음소거 상태 -->
+    <item android:drawable="@drawable/mic_off" android:state_checked="false"/>
+    <!--선택하지 않았을때 아이콘: 음소거 해제 상태 -->
+    <item android:drawable="@drawable/mic_on" android:state_checked="true"/>
+</selector>

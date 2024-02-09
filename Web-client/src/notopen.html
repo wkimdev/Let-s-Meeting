@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Meeting</title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="../public/css/style.home.css" />
+
+</head>
+<body>
+  <!--회의준비화면-->
+  <div class="uk-container-expand">
+    <!--네비게이션바-->
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="#">
+          <img src="./public/image/letsmeeing_logo.png" alt="">&nbsp;&nbsp; Let's Meeting
+        </a>
+      </div>
+
+      <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav login__not">
+          </ul>
+
+          <ul class="uk-navbar-nav">
+
+          </ul>
+      </div>
+
+    </nav>
+
+    <!--홈메인 화면-->
+    <div class="uk-container">
+
+      <div class="uk-position-center">
+        <div class="uk-flex uk-flex-center" style="margin-bottom: 0px">
+          <!-- 오른쪽 -->
+          <div class="prepare_text">
+
+            <h1 class="uk-heading-line uk-text-center"><span>❗ 회의에 참가할 수 없습니다.</span></h1>
+            
+            <div class="uk-flex uk-flex-column">
+
+              <h3>🚪 호스트가 아직 회의를 시작하지 않았습니다!</h3>
+              <button id="moveTohome" class="uk-button uk-button-default uk-button-large">홈으로가기</button>
+
+              <h1 class="uk-heading-divider"></h1>  
+              <h3>🙌 호스트라면 로그인하여 이 회의를 시작합니다.</h3>
+              <button id="moveToLogin" class="uk-button uk-button-primary uk-button-large">로그인</button>
+
+            </div>
+            
+          </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+  </div>
+
+
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+</body>
+<script src="../public/js/notopen.js"></script>
+</html>

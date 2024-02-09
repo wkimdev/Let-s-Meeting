@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <!--전체 회의아이템 틀-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--회의날짜-->
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_startTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_roundb"
+                android:text="오후 3:00"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!--회의타이틀-->
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/nanum_square_roundb"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="리즈의 렛츠미팅 회의" />
+
+            <TextView
+                android:id="@+id/txt_meetingId"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/nanum_square_roundb"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                android:text="12334" />
+
+
+        </LinearLayout>
+
+
+        <!--이미지더하기-->
+        <Button
+            android:id="@+id/btn_startMeeting"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:backgroundTint="@color/deepGreen_light"
+            android:layout_marginRight="10dp"
+            android:text="시작" />
+
+
+        <!--히든값: 회의비밀번호-->
+        <TextView
+            android:id="@+id/txt_meetingPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text=""/>
+
+        <!--히든값: 회의기간-->
+        <TextView
+            android:id="@+id/txt_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text=""/>
+
+        <!--히든값: 회의상태값-->
+        <TextView
+            android:id="@+id/txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text=""/>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

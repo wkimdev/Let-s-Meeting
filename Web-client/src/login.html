@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Meeting</title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="../public/css/style.home.css" />
+</head>
+<body>
+  <!--홈화면-->
+  <div class="uk-container-expand">
+    <!--네비게이션바-->
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="/">
+            <img src="./public/image/letsmeeing_logo.png" alt="">&nbsp;&nbsp; Let's Meeting
+          </a>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav login__not">
+                <!-- 미로그인의 경우 Navbar -->
+                <li><span class="currentTime"></span></li>
+                <li><a href="/login">로그인</a></li>
+
+                <!-- 로그인했을 경우 Navbar -->
+                <!-- <img class="profile_img" src="" alt="프로필이미지" srcset="">
+
+                <li>
+                    <a class="welcome_text" href="#">리즈님 환영합니다</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="#">내프로필</a></li>
+                            <li><a href="#">로그아웃</a></li>
+                        </ul>
+                    </div>
+                </li> -->
+            </ul>
+
+            <ul class="uk-navbar-nav">
+
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <!--홈메인 화면-->
+    <div class="uk-container login">
+      <div class="uk-position-center login">
+        <div>
+            <h1 class="uk-heading-medium title_login">로그인</h1>
+
+            <form>
+                <fieldset class="uk-fieldset">
+
+                    <div class="uk-margin">
+                        <input type="text" name="userId" id="userId" placeholder="아이디" class="uk-input" required>
+                    </div>
+
+                    <div class="uk-margin">
+                        <input type="password" name="password" id="password" placeholder="비밀번호" class="uk-input" required>
+                    </div>
+                    <label><input id="saveId__checkbox" name="checked" class="uk-checkbox" type="checkbox"> 아이디 저장</label>
+
+                </fieldset>
+
+            </form>
+
+            <p uk-margin>
+                <button id="btnLogin" class="uk-button uk-button-primary uk-button-large uk-width-medium">로그인</button>
+            </p>
+
+            <div class="uk-flex uk-flex-center">
+              <!-- <a href="#" class="uk-text-default">회원가입</a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#" class="uk-text-default">비밀번호 찾기</a> -->
+            </div>
+
+        </div>
+
+        <!--로그인로딩 스피너-->
+        <!--<span class="login_spinner" uk-spinner="ratio: 4.5"></span>-->
+    </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="company-name">
+        Let's Meeting
+      </p>
+      <p class="company-info">
+        <a href="/agreement/agreement1.php" class="">이용약관</a> | <a href="/agreement/agreement2.php" class="">개인정보처리방침</a>
+      </p>
+      <p class="company-info">
+        <!-- 회사명, 사업자번호, 대표자, 연락처, 주소 -->
+        개발자: Kim Wi | 연락처: wkimdev@gmail.com
+      </p>
+
+      <div class="icons">
+        <a href="#" uk-icon="icon: linkedin"></a>
+        <a href="#" uk-icon="icon: github"></a>
+        <a href="#" uk-icon="icon: google"></a>
+        
+        <p class="company-right">
+          Let's Meeting &copy; 2022, ALL Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+    <!-- SHA256모듈 CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+</body>
+<script src="../public/js/login.js" type="module"></script>
+</html>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">렛츠미팅</string>
+    <string name="reset_pwd"><u>비밀번호를 잊었나요?</u></string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- Ted Permission -->
+    <string name="permission_1">카메라 및 앨범접근 권한이 필요합니다.</string>
+    <string name="permission_2">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+    <string name="title_activity_new_meeting">NewMeetingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="설정"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="#E4E5E8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView5"-->
+<!--        android:layout_width="57dp"-->
+<!--        android:layout_height="58dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:background="@drawable/shape"-->
+<!--        android:src="@drawable/ic_perm_identity"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/view1" />-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImg_profile"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/shape"
+        android:src="@drawable/ic_perm_identity"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="false"
+        app:civ_border_width="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/circleImg_profile"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+        <TextView
+            android:id="@+id/txt_memName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="닉네임" />
+
+        <TextView
+            android:id="@+id/txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundr"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="test@gmail.com" />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/imgBtn_goMyProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:srcCompat="@drawable/ic_forward" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="48dp"
+        android:background="#858484"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <!-- 닉네임 영역 끝-->
+
+    <TextView
+        android:id="@+id/txt_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:textSize="20sp"
+        android:text="버전"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/txt_versionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="0.1"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_version"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#858484"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_versionValue" />
+
+    <!-- 버전 영역 끝-->
+
+
+    <TextView
+        android:id="@+id/txt_agreementText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="개인정보처리방침"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <ImageButton
+        android:id="@+id/btn_privacyAgreement"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:srcCompat="@drawable/ic_forward" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#858484"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_privacyAgreement" />
+
+    <!-- 개인정보처리 방침 영역 끝-->
+
+    <TextView
+        android:id="@+id/txt_agreementText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="서비스 이용약관"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <ImageButton
+        android:id="@+id/btn_serviceAgreement"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:srcCompat="@drawable/ic_forward" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#858484"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_serviceAgreement" />
+
+    <!-- 서비스 이용약관 영역 끝-->
+
+    <TextView
+        android:id="@+id/txt_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginTop="40dp"
+        android:background="#E4E5E8"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:gravity="center"
+        android:text="Copyright © 2022 Let's Meeting. All rights reserved. \n 개발자 연락처: wkimdev@gmail.com"
+        android:textAlignment="center"
+        android:textColor="#656565"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

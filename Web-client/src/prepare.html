@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Meeting</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    crossorigin="anonymous">
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="../public/css/style.home.css" />
+
+</head>
+<body>
+  <!--회의준비화면-->
+  <div class="uk-container-expand">
+
+    <!--네비게이션바-->
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo">
+          <img id="logo" src="./public/image/letsmeeing_logo.png" alt="">&nbsp;&nbsp; Let's Meeting
+        </a>
+      </div>
+
+      <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav login__not">
+          </ul>
+          <ul class="uk-navbar-nav">
+          </ul>
+      </div>
+    </nav>
+
+
+    <!--홈메인 화면-->
+    <div class="uk-container">
+
+          <div class="uk-position-center">
+            <div class="uk-flex uk-flex-center" style="margin-bottom: 0px">
+              <div class="main__prepare_left">
+                <p class="title">✅ 회의에 참여전 오디오 및 영상을 확인하세요!</p>
+                <div id="myStream">
+                  <video id="myFace" autoplay="" playsinline="" width="500" height="400"></video>
+                  
+                  <!-- 음소거, 비디오 활성화, 화면공유 버튼 -->
+                  <div id="controlers__column">
+                    <div id="buttons">
+
+                      <button id="mute">
+                        <i class="fas fa-microphone fa-2x unMuteIcon"></i>
+                        <i class="fas fa-microphone-slash fa-2x muteIcon"></i>
+                      </button>
+                      <button id="camera">
+                        <i class="fas fa-video fa-2x cameraIcon"></i>
+                        <i class="fas fa-video-slash fa-2x unCameraIcon"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- 오른쪽 -->
+              <div class="prepare_text">
+
+                <h1 class="uk-heading-line uk-text-center"><span>회의에 참여할<br>준비가 되셨나요?</span></h1>
+                
+                <div class="uk-flex uk-flex-column">
+
+                  <p uk-margin>
+                    <button id="enterBtn" class="uk-button uk-button-primary uk-button-large">지금 참여하기</button>
+                  </p>
+                  <p uk-margin>
+                    <button id="moveHomeBtn" class="uk-button uk-button-default uk-button-large">홈으로 이동</button>
+                  </p>
+
+                </div>
+                
+              </div>
+          </div>
+        </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+</body>
+<script src="../public/js/prepare.js" type="module"></script>
+</html>

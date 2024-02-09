@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="370dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/txt_meetingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회의 타이틀"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_title5"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="회의ID"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_meetingNum"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="111-111-111"
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/copyMeetingId"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/file_copy" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <!--회의호스트ID-->
+        <TextView
+            android:id="@+id/txt_title10"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="호스트ID"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!--회의호스트값-->
+        <TextView
+            android:id="@+id/txt_hostId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="test@gmail.com"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_title6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="회의암호"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_meetingPwd"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="13asdf2"
+            android:textAlignment="center"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/copyMeetingPwd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/file_copy" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--회의참여인원수 제한-->
+        <TextView
+            android:id="@+id/txt_title11"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="회의 참여 \n인원 수 제한"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!-- 회의참여인원수 제한 값 -->
+
+        <TextView
+            android:id="@+id/txt_participantNum"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="2명"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--기간-->
+        <TextView
+            android:id="@+id/txt_title4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="기간"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!--기간 내용 -->
+        <TextView
+            android:id="@+id/txt_duration"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="1시간 30분"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/nanum_square_roundb"-->
+<!--            android:text="회의정보복사"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/deepGreen_primary"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/copyMeetingInfo"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:src="@drawable/file_copy" />-->
+
+<!--    </LinearLayout>-->
+
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 모바일단말에서 mediaquery 적용되도록 하기 위해 선언함 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./public/css/style.desktop.css">
+  <style>
+    /* object-fit: cover;
+      대체 콘텐츠의 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득 채웁니다. 
+      서로의 가로세로비가 일치하지 않으면 객체 일부가 잘려나갑니다. */
+    video, .people2 {
+      object-fit: cover;
+    }
+    .people3, .people4, .people5 {
+      object-fit: cover;
+      width: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="meetingMain">
+    <!-- 비디오회의 영역 -->
+    <section id="streamBox">
+
+      <!-- 비디오 노출영역 -->
+      <div class="screen__mobile">
+        <!-- version2 -->
+        <div id="myStream">
+          <video id="myFace"
+          poster="./public/image/default_user2.png"
+          autoplay="" playsinline="" width="400" height="400"></video>
+          <h3 id="nickname__mobile"></h3>
+        </div>
+      </div>
+
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/mobile.js"></script>
+  </main>
+
+</body>
+</html>

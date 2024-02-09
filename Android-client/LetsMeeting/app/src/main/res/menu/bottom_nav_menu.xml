@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_meeting"
+        android:enabled="true"
+        android:icon="@drawable/comment"
+        android:title="회의" />
+
+    <item
+        android:id="@+id/action_reservation"
+        android:enabled="true"
+        android:icon="@drawable/access_time"
+        android:title="예약" />
+
+    <item
+        android:id="@+id/action_setting"
+        android:enabled="true"
+        android:icon="@drawable/settings"
+        android:title="설정" />
+
+</menu>

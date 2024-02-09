@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Meeting</title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
+  <!-- flatpicker CSS:날짜선택셀렉트 박스 UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="../public/css/style.home.css" />
+
+</head>
+<body>
+  <!--홈화면-->
+  <div class="uk-container-expand">
+    <!--네비게이션바-->
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="#">
+          <img src="./public/image/letsmeeing_logo.png" alt="">&nbsp;&nbsp; Let's Meeting
+        </a>
+      </div>
+    
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav login__not">
+          <!-- 미로그인의 경우 Navbar -->
+          <li><span class="currentTime"></span></li>
+          <li class="before__login hidden">
+            <a href="/login">로그인</a>
+          </li>
+    
+          <!-- 로그인했을 경우 Navbar -->
+          <img class="profile_img hidden" src="" alt="프로필이미지" srcset="">
+    
+          <li class="after__login hidden">
+              <a class="welcome_text" href="#">유저님 환영합니다</a>
+              <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                      <li class="nav__nickname">닉네임</li>
+                      <li class="nav__email">이메일</li>
+                      <li><a class="logout" href="#">로그아웃</a></li>
+                  </ul>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--홈메인 화면-->
+    <div class="uk-container">
+      
+      <!-- 회의시작영역 -->
+      <section class="meeting__start">
+        <div class="uk-child-width-expand@s" uk-grid>
+          <div class="uk-grid-item-match">
+            <h1 class="uk-heading-line uk-text-center"><span>누구나 쉽게 <br/>회의에 참여 하세요!</span></h1>
+              
+            <!-- 회의참여 영역 돔 -->
+            <div class="uk-flex uk-flex-column">
+              <p uk-margin>
+                <button id="btn_newMeeting" class="uk-button uk-button-primary uk-button-large">+ 새회의 시작하기</button>
+              </p>
+
+              <label class="uk-form-label" for="form-stacked-text">코드를 입력하고 회의에 참여</label>
+              <div class="enter_meeting">
+                <input id="meeting_num" class="uk-input uk-form-width-medium" type="text" placeholder="회의코드를 입력해주세요">
+                <button id="btn_startMeetieng" class="uk-button uk-button-primary">시작</button>
+              </div>
+
+              <!-- <p uk-margin>
+                <span class="uk-form-label" for="form-stacked-text">Let's Meeting서비스에 대해 
+                    <a href="#">자세히 알아보세요</a></label>
+              </p> -->
+            </div>
+        </div>
+
+          <div class="home__img">
+            <p>
+              <img src="./public/image/home_main.jpg" alt="" srcset="">
+            </p>
+          </div>
+        </div>  
+      </section>
+
+      <section class="service__introduce">
+        <div class="introduce__title">
+          <h3>Let's Meeting에서 무엇을 할 수 있는지 알아보기</h3>
+          <span class="uk-margin-small-right" uk-icon="icon: arrow-down; ratio: 2"></span>
+        </div>
+      </section>
+
+      <!-- 서비스안내영역 1 -->
+      <section class="service__introduce">
+        <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-grid-item-match">
+                <h3 class="introduce__title">쉽고 빠르게 회의를 예약하세요</h3>
+                <p class="introduce__content">
+                  Let's Meeting은 사용자가 쉽고 빠르게 회의를 예약할 수 있도록
+                  서비스를 제공합니다. 언제 어디서나 간편하게 회의를 예약하고 소통할 수 있습니다. 
+                </p>
+            </div>
+            <div>
+                <p>
+                  <img src="./public/image/img_service_1.png" alt="" srcset="">
+                </p>
+            </div>
+        </div>  
+      </section>
+
+      <!-- 서비스안내영역 2 -->
+      <section class="service__introduce">
+        <div class="uk-child-width-expand@s" uk-grid>
+          <div class="uk-grid-item-match">
+            <p>
+              <img src="./public/image/img_service_2.png" alt="" srcset="">
+            </p>
+          </div>
+          <div>
+              <h3 class="introduce__title_2">어디서든 사용할 수 있어요</h3>
+              <p class="introduce__content_2">
+                Let's Meeting에서 모두와 만나 비즈니스 제안서를 발표하고, 코딩 과제를 함께 하고, 아니면 그냥 얼굴을 보고 안부를 전할 수 있습니다. 
+                <br>
+                사용자들과 실시간 스트리밍을 진행하며 채팅 및 파일을 주고 받을 수 있습니다.
+              </p>
+              <br>
+          </div>
+      </div>  
+      </section>
+
+      <!-- 서비스안내영역 3 -->
+      <section class="service__introduce">
+        <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-grid-item-match">
+                <h3 class="introduce__title">모바일과 웹에서 참여할 수 있어요</h3>
+                <p class="introduce__content">
+                  초대받은 사용자도 컴퓨터에 최신 브라우저만 있으면 소프트웨어를 설치하지 않고도 온라인 화상 회의에 참여할 수 있습니다. 
+                  <br>
+                  휴대기기에서는 앱만 설치하면 참여할 수 있습니다.
+                </p>
+            </div>
+            <div>
+                <p>
+                  <img src="./public/image/img_service_3.png" alt="" srcset="">
+                </p>
+            </div>
+        </div>  
+      </section>
+      
+    </div>
+
+
+    <!-- 새회의 생성 모달 -->
+    <div id="modal-new-meeting" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">새회의 생성</h2>
+        </div>
+
+        <div class="uk-modal-body">
+          <form>
+
+            <div class="uk-margin">
+              <div class="title_container">
+                <label class="uk-form-label" for="form-stacked-text">회의타이틀</label>
+                <p class="text__length">0/100</p>
+              </div>
+
+              <div class="uk-form-controls">
+                <input class="meeting_title uk-input uk-form-width-large" type="text" placeholder="리즈님의 회의"  maxlength="100">
+                <p class="title__alert hidden">회의명은 100자 이내로 작성해주세요.</p>
+              </div>
+            </div>
+
+            <div class="uk-margin">
+              <div class="duration_title">
+                <label class="uk-form-label" for="form-stacked-text">회의기간</label>
+                <span>(표준시간대: 서울)</span>
+              </div>
+              <div class="uk-form-controls">
+                <div class="uk-grid">
+                  <div class="uk-width-1-3@s">
+                    <input class="current_date uk-input" type="text" placeholder="25" disabled>
+                  </div>
+                  <div class="uk-width-2-3@s">
+                    <input class="uk-input" type="text" id="timePicker" placeholder="00시간 30분" data-id="timePicker24" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 회의참여인원수 -->
+            <div class="uk-margin">
+              <label class="uk-form-label" for="form-stacked-text">회의참여 인원수 제한</label>
+              <div class="uk-form-controls">
+                <select class="participant_num uk-select">
+                    <option value=2>2명</option>
+                    <option value=3 selected>3명</option>
+                    <option value=4>4명</option>
+                    <option value=5>5명</option>
+                </select>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+        <!-- end modal body -->
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close createCancleBtn" type="button">취소</button>
+            <button class="uk-button uk-button-primary createMeetingBtn" type="button">시작</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 회의참여 모달 -->
+    <div id="modal-center" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">회의참여</h2>
+        </div>
+
+        <div class="uk-modal-body">
+          <form>
+
+            <div class="uk-margin">
+              <label class="uk-form-label" for="form-stacked-text">회의 비밀번호</label>
+              <div class="uk-form-controls">
+                <input type="text" name="meetingPwd" id="meetingPwd" placeholder="회의비밀번호 입력" class="uk-input" required />
+              </div>
+            </div>
+            <div class="uk-margin">
+              <label class="uk-form-label" for="form-stacked-text">유저명 입력</label>
+              <div class="uk-form-controls">
+                <input type="text" name="username" id="username" placeholder="유저명 입력" class="uk-input" required />
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <!-- end modal body -->
+        <div class="uk-modal-footer uk-text-right">
+            <button id="cancle" class="uk-button uk-button-default uk-modal-close" type="button">취소</button>
+            <button id="confirm" class="uk-button uk-button-primary" type="button">참가</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 새회의생성 modal -->
+    <div id="modal-check-login" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+  
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+  
+          <p>새회의 생성을 위해 먼저 로그인을 진행해주세요.</p>
+          <p class="uk-text-right">
+              <button class="btn_cancle uk-button uk-button-default uk-modal-close" type="button">취소</button>
+              <button class="btn_moveToLogin uk-button uk-button-primary" type="button">확인</button>
+          </p>
+      </div>
+    </div>
+
+    <!-- 회의 시작안했을 경우 모달팝업 -->
+    <div id="modal-check-meetingStatus" class="uk-flex-top" uk-modal>
+      <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">❗ 회의에 참가할 수 없습니다</h2>
+        </div>
+
+        <div class="uk-modal-body">
+
+          <div class="uk-margin">
+            <p>호스트가 아직 회의를 시작하지 않았습니다!</p>
+            <p>호스트라면 로그인하여 이 회의를 시작해주세요.</p>
+          </div>
+        </div>
+
+        <!-- end modal body -->
+        <div class="uk-modal-footer uk-text-right">
+            <button id="cancle" class="uk-button uk-button-default uk-modal-close" type="button">취소</button>
+            <button class="btn_moveToLogin notopen uk-button uk-button-primary" type="button">로그인하기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="position: relative;">
+      <p class="company-name">
+        Let's Meeting
+      </p>
+      <p class="company-info">
+        <a href="/rules/service" class="">이용약관</a> | <a href="/rules/privacy" class="">개인정보처리방침</a>
+      </p>
+      <p class="company-info">
+        <!-- 회사명, 사업자번호, 대표자, 연락처, 주소 -->
+        개발자: Kim Wi | 연락처: wkimdev@gmail.com
+      </p>
+
+      <div class="icons">
+        <a href="#" uk-icon="icon: linkedin"></a>
+        <a href="#" uk-icon="icon: github"></a>
+        <a href="#" uk-icon="icon: google"></a>
+        
+        <p class="company-right">
+          Let's Meeting &copy; 2022, ALL Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+    <!-- 날짜선택 selectbox를 구현하기 위한 flatpickr 사용  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>    
+    <!-- 날짜포맷팅을위해 사용하는 moment라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+<script type="module" src="../public/js/home.js"></script>
+<script type="module" src="../public/js/meeting.js"></script>
+
+
+
+</html>

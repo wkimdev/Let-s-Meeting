@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/meeting_container"
+    tools:context=".meeting.MeetingActivity">
+
+    <!-- elevation: 승진,승격, 높은곳
+    기본 z 뷰의 깊이를 나타내는 옵션
+    android:elevation="16dp" -->
+    <LinearLayout
+        android:id="@android:id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:layout_marginTop="2dp"
+        android:visibility="visible"
+        android:background="@color/green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgBtn_changeCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/switch_camera" />
+
+        <TextView
+            android:id="@+id/meeting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="9"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:gravity="center"
+            android:text="렛츠미팅"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/red"
+            android:text="종료" />
+    </LinearLayout>
+
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:weightSum="9"
+        app:layout_constraintTop_toBottomOf="@+id/webView"
+        android:orientation="horizontal">
+
+        <!--마이크 on/off-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_micOn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/mic_on" />
+
+            <ImageView
+                android:id="@+id/img_micOff"
+                android:visibility="gone"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/mic_off" />
+
+            <TextView
+                android:id="@+id/txt_micState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/mic_on"
+                android:text="음소거"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <!--비디오 on/off-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_videoOn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/videocam" />
+
+            <ImageView
+                android:id="@+id/img_videoOff"
+                android:visibility="gone"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/videocam_off" />
+
+            <TextView
+                android:id="@+id/txt_videoState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/mic_on"
+                android:text="비디오시작"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!--채팅-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_cntChat"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:minWidth="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:elevation="1dp"
+                    android:background="@drawable/txt_chat_count"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:text="1"/>
+
+                <ImageView
+                    android:id="@+id/img_chat"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/chat" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="채팅"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--채팅레이아웃 시작-->
+    <LinearLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:translationZ="2dp"
+        android:elevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="10"
+            android:background="@color/green_dark">
+
+            <TextView
+                android:id="@+id/meeting_title_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nanum_square_roundb"
+                android:gravity="center_horizontal"
+                android:elevation="2dp"
+                android:text="채팅"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!--Recycler View-->
+        <!--layout_weight="1"을 주면, 높이값을 줄필요가 없다.-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_chat"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/chat_item"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            android:layout_marginTop="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="4dp"
+            />
+
+        <!--메세지 전송 영역-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/gray_light"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/editTxt_chat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:enabled="false"
+                android:backgroundTint="@color/gray"
+                android:text="SEND"
+                android:textColor="@color/white"
+                android:layout_width="80dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--채팅레이아웃 끝-->
+
+    <!--snackbar 위치를 조정하기 위해 사용하는 레이아웃-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/layout_coordinator"
+        android:elevation="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--채팅알림 메세지 시작-->
+    <LinearLayout
+        android:id="@+id/layout_chatNotification"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_chatNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/deepGreen_light"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_profile_noti"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="#26c6da"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/default_user"/>
+
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_nickname_noti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nickname"
+                        android:fontFamily="@font/nanum_square_roundb"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/txt_message_noti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/nanum_square_roundb"
+                        android:textSize="18sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="chat message chat message chat message chat message..!"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <!--채팅알림 메세지 끝-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

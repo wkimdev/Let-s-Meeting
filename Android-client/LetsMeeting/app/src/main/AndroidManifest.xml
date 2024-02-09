@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wkimdev.letsmeeting">
+    <!-- HTTP 통신을 하기 위한 인터넷 접근 권한 허용 -->
+    <!-- 네트워크 소켓을 열도록 허용해주는 권한 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 네트워크 관련 정보에 접근할 수 있도록 허용해주는 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- camera, gallery 에 접근하기 위한 권한 설정 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Allows an application to modify global audio settings. -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LetsMeeting"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize">
+        <activity
+            android:name=".setting.MemberLeaveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meeting.NotOpenActivity"
+            android:exported="false" />
+
+        <!-- screenOrientation 옵션: 세로모드 고정 -->
+        <activity
+            android:name=".meeting.MeetingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meeting.ReadyMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meeting.EnterMeetingActivity"
+            android:exported="false" />
+
+        <!--회의예약알림을 받기 위한 receiver등록-->
+        <receiver
+            android:name=".reservation.NotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".meeting.NewMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meeting.PushMeetingActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reservation.MeetingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.DateTimePickPopupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.EditReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.ChangeGMTActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.AddReservationActivity"
+            android:exported="false" />
+        <!--
+         파일 공유를 하기 위해선, file:// 이 아닌, content://URI 로 형식으로 바꿔줘야 한다.
+            그리고 권한을 부여해주기 위해 fileprovider 사용하기 위한 선언문을 사용한다.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.wkimdev.letsmeeting.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- 이미지 CROP 처리를 위한 액티비티 추가 -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".setting.ChangePwdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".setting.ChangeNameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.ReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.FindPwdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".join.PrivacyAgreementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".join.ServiceAgreementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".join.AgreementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".join.ConfirmMailAuth"
+            android:exported="false" />
+        <activity
+            android:name=".join.JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!--
+        1. clearTaskOnLaunch: Activity가 re-launch 될 때, task에서 root activity를 제외하고 위에 쌓인 모든 activity instance를 모두 제거
+        2. noHistory="true" : 로그인이나 회원탈퇴 이후 다시 메인페이지로 진입하지 않으면서, task스택이 쌓이지 않도록 하기 위해 설정함  -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

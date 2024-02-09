@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Meeting</title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css" />
+  <!-- flatpicker CSS:날짜선택셀렉트 박스 UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="../public/css/style.home.css" />
+  <link rel="stylesheet" href="../public/css/style.agreement.css" />
+
+</head>
+<body>
+  <!--홈화면-->
+  <div class="uk-container-expand">
+    <!--네비게이션바-->
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="#">
+          <img src="../public/image/letsmeeing_logo.png" alt="">&nbsp;&nbsp; Let's Meeting
+        </a>
+      </div>
+    
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav login__not">
+          <!-- 미로그인의 경우 Navbar -->
+          <li><span class="currentTime"></span></li>
+          <li class="before__login hidden">
+            <a href="/login">로그인</a>
+          </li>
+    
+          <!-- 로그인했을 경우 Navbar -->
+          <img class="profile_img hidden" src="" alt="프로필이미지" srcset="">
+    
+          <li class="after__login hidden">
+              <a class="welcome_text" href="#">유저님 환영합니다</a>
+              <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                      <li class="nav__nickname">닉네임</li>
+                      <li class="nav__email">이메일</li>
+                      <li><a class="logout" href="#">로그아웃</a></li>
+                  </ul>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--서비스이용약관 내용-->
+    <div class="uk-container">
+      <h3 class="privacy__title">서비스이용약관</h3>
+      <section class="service">
+
+      </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer" style="position: relative;">
+      <p class="company-name">
+        Let's Meeting
+      </p>
+      <p class="company-info">
+        <a href="/rules/service" class="">이용약관</a> | <a href="/rules/privacy" class="">개인정보처리방침</a>
+      </p>
+      <p class="company-info">
+        <!-- 회사명, 사업자번호, 대표자, 연락처, 주소 -->
+        개발자: Kim Wi | 연락처: wkimdev@gmail.com
+      </p>
+
+      <div class="icons">
+        <a href="#" uk-icon="icon: linkedin"></a>
+        <a href="#" uk-icon="icon: github"></a>
+        <a href="#" uk-icon="icon: google"></a>
+        
+        <p class="company-right">
+          Let's Meeting &copy; 2022, ALL Rights Reserved
+        </p>
+      </div>
+    </footer>
+  </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+    <!-- 날짜선택 selectbox를 구현하기 위한 flatpickr 사용  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>    
+    <!-- 날짜포맷팅을위해 사용하는 moment라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+<script type="module" src="../public/js/agreement.js"></script>
+<script type="module" src="../public/js/common.js"></script>
+<script type="module" src="../public/js/meeting.js"></script>
+
+</html>

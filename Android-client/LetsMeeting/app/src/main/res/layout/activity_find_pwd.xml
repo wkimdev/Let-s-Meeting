@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.FindPwdActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="비밀번호를 잊었습니다"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanum_square_roundr"
+        android:text="비밀번호를 재설정하려면 이메일 주소를 입력해주세요. \n 메일이 오지 않는다면 스팸메일함을 확인해주세요"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <EditText
+        android:id="@+id/editTxt_email"
+        android:layout_width="366dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="이메일주소"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="324dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/gray"
+        android:enabled="false"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="전송"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_email" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

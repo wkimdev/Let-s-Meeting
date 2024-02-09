@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setting.MemberLeaveActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회원 탈퇴"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="#E4E5E8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+
+    <TextView
+        android:id="@+id/txt_title2"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회원 탈퇴 안내"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+
+    <TextView
+        android:id="@+id/txt_1"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nanum_square_roundr"
+        android:gravity="center"
+        android:text="* 탈퇴 후 회원정보 및 개인 서비스 이용내역은 삭제 됩니다."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2" />
+
+    <TextView
+        android:id="@+id/txt_2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nanum_square_roundr"
+        android:gravity="center"
+        android:text="* 탈퇴 후 서비스에 등록한 회의내역들은 모두 삭제됩니다."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:background="#E4E5E8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_2" />
+
+
+    <TextView
+        android:id="@+id/txt_title3"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="113dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="탈퇴 사유(필수)"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+    <TextView
+        android:id="@+id/txt_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nanum_square_roundr"
+        android:text="탈퇴하시는 이유를 알려주세요."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title3" />
+
+    <RadioGroup
+        android:id="@+id/rdGroup_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_3">
+
+        <RadioButton
+            android:id="@+id/radioBtn_reason1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용빈도가 낮아요"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <RadioButton
+            android:id="@+id/radioBtn_reason2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서비스 이용이 불편해요"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="449dp" />
+
+        <RadioButton
+            android:id="@+id/radioBtn_reason3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인정보 유출이 우려되요"
+            tools:layout_editor_absoluteX="227dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <RadioButton
+            android:id="@+id/radioBtn_reason4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기능이 너무 빈약해요"
+            tools:layout_editor_absoluteX="228dp"
+            tools:layout_editor_absoluteY="449dp" />
+
+        <RadioButton
+            android:id="@+id/radioBtn_reason5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기타"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="506dp" />
+
+
+    </RadioGroup>
+
+
+    <CheckBox
+        android:id="@+id/chBtn_confirm"
+        android:layout_width="363dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="유의사항을 모두 확인 했고, 회원 탈퇴 합니다."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdGroup_reason" />
+
+    <Button
+        android:id="@+id/btn_leave"
+        android:layout_width="324dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#DAD8D8"
+        android:enabled="false"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회원탈퇴"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chBtn_confirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

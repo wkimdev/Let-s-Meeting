@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".join.ConfirmMailAuth">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입화면"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTxt_email"
+        android:layout_width="248dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="이메일 입력"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+
+    <Button
+        android:id="@+id/btn_sendAuthCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/green_primary"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:gravity="center"
+        android:text="인증호받기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/editTxt_email"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title4" />
+
+    <TextView
+        android:id="@+id/txt_title2"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="인증메일이 전송되었습니다! \n 인증코드를 입력해주세요!"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_sendmail" />
+
+    <TextView
+        android:id="@+id/txt_title4"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입하기전 이메일을 인증해주세요!"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <EditText
+        android:id="@+id/editTxt_authCode"
+        android:layout_width="379dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:hint="인증번호입력"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2" />
+
+    <!--  비활성화 이후 활성화시키기-->
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="324dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="@color/gray"
+        android:enabled="false"
+        android:text="계속"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_authCode" />
+
+    <ImageView
+        android:id="@+id/img_sendmail"
+        android:layout_width="174dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icon_send_mail"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_email" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_authTime"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:fontFamily="@font/nanum_square_roundb"-->
+<!--        android:text="[남은시간 5:00 ]"-->
+<!--        android:visibility="visible"-->
+<!--        android:textColor="#F0FF1717"-->
+<!--        android:textSize="18dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/editTxt_authCode"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txt_title2" />-->
+
+    <TextView
+        android:id="@+id/txt_auth_fail"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="인증번호를 다시 확인해주세요"
+        android:textAlignment="center"
+        android:textColor="#F0FF1717"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_authCode" />
+
+    <TextView
+        android:id="@+id/txt_auth_success"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="인증이 완료 되었습니다."
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_authCode" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

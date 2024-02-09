@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="242dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="92dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회의를 시작하거나 \n 참가하세요"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="141dp"
+        android:fontFamily="@font/nanum_square_roundr"
+        android:text="Let's Meeting"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="170dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/letsmeeting_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <Button
+        android:id="@+id/btn_enterMeeting"
+        android:layout_width="289dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/green_dark"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회의참여하기"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/green_dark"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="가입"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_login"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enterMeeting" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="120dp"
+        android:layout_marginTop="36dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="@color/green_dark"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="로그인"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enterMeeting" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

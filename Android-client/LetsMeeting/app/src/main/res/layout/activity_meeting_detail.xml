@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reservation.MeetingDetailActivity">
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="163dp"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="회의세부정보"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/deepGreen_primary"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="편집"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/txt_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="회의주제"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!--android:text="리즈의 렛츠미팅 회의"-->
+        <TextView
+            android:id="@+id/txt_meetingTitle"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_custom"
+            android:ellipsize="end"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_title2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toEndOf="@+id/txt_title2"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/txt_title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="시작일"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title2" />
+
+        <!--android:text="2022년 2월 7일 오후 3:00"-->
+        <TextView
+            android:id="@+id/txt_meetingDate"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_custom"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_title3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toEndOf="@+id/txt_title2"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title2" />
+    </LinearLayout>
+
+
+
+    <!--기간-->
+    <LinearLayout
+        android:id="@+id/txt_title4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title3">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="기간"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title3" />
+
+        <!--기간 내용 android:text="1시간 30분" -->
+        <TextView
+            android:id="@+id/txt_meetingDuration"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_custom"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_title4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toEndOf="@+id/txt_title3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title3" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/txt_title10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title4">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="호스트ID"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title4" />
+
+        <!--회의호스트값: android:text="test@gmail.com"-->
+        <TextView
+            android:id="@+id/txt_hostId"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_custom"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_title10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toEndOf="@+id/txt_title4"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txt_title11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title10">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="회의 참여 \n인원수 제한"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title10" />
+
+        <!-- 회의참여인원수 제한 값 android:text="2명" -->
+        <TextView
+            android:id="@+id/txt_participantNum"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_custom"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:padding="10dp"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintStart_toEndOf="@+id/txt_title10"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title10" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/txt_title12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title11">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="회의ID"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title11" />
+
+        <!--android:text="111-111-111"-->
+        <TextView
+            android:id="@+id/txt_meetingNum"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_custom"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:padding="10dp"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_title5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toEndOf="@+id/txt_title11"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title11" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/txt_title13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title12">
+
+        <TextView
+            android:id="@+id/txt_title6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:text="회의비밀번호"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title5" />
+
+        <!--시작버튼 android:text="13asdf2"-->
+        <TextView
+            android:id="@+id/txt_meetingPwd"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/txt_custom"
+            android:fontFamily="@font/nanum_square_roundb"
+            android:padding="10dp"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_title6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toEndOf="@+id/txt_title5"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title5" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_startMeeting"
+        android:layout_width="324dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#DAD8D8"
+        android:enabled="true"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="시작"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title13" />
+
+    <!--삭제버튼-->
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="324dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DAD8D8"
+        android:enabled="true"
+        android:fontFamily="@font/nanum_square_roundb"
+        android:text="삭제"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_startMeeting" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="88dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="296dp"
+        app:SpinKit_Color="#F8FFFE"
+        android:background="#90000832"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

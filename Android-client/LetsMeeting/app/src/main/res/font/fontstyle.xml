@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 가는 글씨체 -->
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanum_square_roundl"/>
+
+    <!-- 중간 글씨체 -->
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanum_square_roundr"/>
+
+    <!-- 굵은 글씨체 -->
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanum_square_roundb"/>
+
+</font-family>

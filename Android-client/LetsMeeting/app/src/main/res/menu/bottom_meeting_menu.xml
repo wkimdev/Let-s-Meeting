@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_meeting"
+        android:enabled="true"
+        android:icon="@drawable/mic_nav_selector"
+        android:title="음소거" />
+
+
+    <item
+        android:id="@+id/action_video"
+        android:enabled="true"
+        android:icon="@drawable/videocam"
+        android:title="비디오시작" />
+
+    <item
+        android:id="@+id/action_content_share"
+        android:enabled="true"
+        android:icon="@drawable/chat"
+        android:title="채팅" />
+
+
+</menu>

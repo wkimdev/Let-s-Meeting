@@ -1,0 +1,31 @@
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+    <a class="uk-navbar-item uk-logo" href="#">
+      <img src="./public/image/letsmeeing_logo.png" alt="">&nbsp;&nbsp; Let's Meeting
+    </a>
+  </div>
+
+  <div class="uk-navbar-right">
+    <ul class="uk-navbar-nav login__not">
+      <!-- 미로그인의 경우 Navbar -->
+      <li><span class="currentTime"></span></li>
+      <li class="before__login hidden">
+        <a href="/login">로그인</a>
+      </li>
+
+      <!-- 로그인했을 경우 Navbar -->
+      <img class="profile_img hidden" src="" alt="프로필이미지" srcset="">
+
+      <li class="after__login hidden">
+          <a class="welcome_text" href="#">유저님 환영합니다</a>
+          <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li class="nav__nickname">닉네임</li>
+                  <li class="nav__email">이메일</li>
+                  <li><a class="logout" href="#">로그아웃</a></li>
+              </ul>
+          </div>
+        </li>
+    </ul>
+  </div>
+</nav>

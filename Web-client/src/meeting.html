@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Meeting</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    crossorigin="anonymous">
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/style.desktop.css">
+
+</head>
+<body>
+  <main class="meetingMain">
+    <!-- 비디오회의 영역 -->
+    <section id="streamBox">
+      <div class="meeting_info">
+        <i id="info__icon" class="fas fa-2x fa-info-circle"></i>
+      </div>
+
+      <!-- 화면공유 영역 -->
+      <div class="screen__share">
+        <video id="screen__view" autoplay width="980" height="500"></video>
+        
+        <div class="screen__share_label">
+          <span class="speaker">발표자</span>
+          <button class="stop_share">화면공유 취소하기</button>
+        </div>
+      </div>
+
+
+      <!-- 비디오 노출영역 -->
+      <div class="screen">
+        <!-- stream 아이템 정렬 -->
+        <div id="myStream">
+          <video id="myFace" autoplay="" playsinline="" width="400" height="400"></video>
+          <p id="userNickname"></p>
+        </div>
+
+      </div>
+
+      <!-- 비디오컨트롤 영역 -->
+      <div id="controlers">
+        <!-- 카메라 모니터선택 -->
+        <div id="controlers__column">
+          <select name="" id="cameras"></select>
+        </div>
+
+        <!-- 음소거, 비디오 활성화, 화면공유 버튼 -->
+        <div id="controlers__column">
+          <div id="buttons">
+
+            <button id="mute">
+              <i class="fas fa-microphone fa-2x unMuteIcon"></i>
+              <i class="fas fa-microphone-slash fa-2x muteIcon"></i>
+            </button>
+            <button id="camera"> 
+              <i class="fas fa-video fa-2x cameraIcon"></i>
+              <i class="fas fa-video-slash fa-2x unCameraIcon"></i>
+            </button>
+            <button id="screen_share">
+              <i class="fas fa-solid fa-2x fa-desktop screenShare"></i>
+              <i class="fas fa-solid-slash fa-2x fa-desktop unScreenShare"></i>
+            </button>
+
+            <button class="" id="file_share">
+              <i class="fas fa-2x fa-file-alt fileShare"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 나가기 버튼 -->
+        <div id="controlers__column" hidden>
+          <button id="leave">나가기</button>
+        </div>
+
+      </div>
+
+    </section>
+    
+
+    <!-- 채팅영역 -->
+    <section class="chat__room">
+      <h2 class="chat__title">채팅</h2>
+      <!-- 채팅영역리스트 -->
+      <ul class="chat__box"></ul>
+      <form action="" class="chatForm">
+        <input type="text" class="message" name="message" id="" placeholder="메세지를 입력해주세요..." autocomplete="off">
+        <button class="send">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </section>  
+
+    <!-- 회의정보 노출 팝업 -->
+    <aside class="modal__info hidden">
+      <div class="modal__info-box">
+      </div>
+    </aside>
+    
+    
+    <!-- 최대허용인원 제한, 회의나가기 팝업 -->
+    <aside class="modal hidden">
+      <div class="modal__box">
+        <h2 class="modal__text"></h2>
+        <div class="modal__btn-box">
+          <button class="cancle__btn">취소</button>
+          <button class="modal__btn">나가기</button>
+        </div>
+        <div class="modal__all_leave hidden">
+          <button class="confirm__btn">확인</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 최대허용인원 제한 -->
+    <aside class="modal hidden">
+      <div class="modal__box">
+        <h2 class="modal__text"></h2>
+        <button class="modal__btn">OK</button>
+      </div>
+    </aside>
+
+    <!-- 화면공유방지 팝업 -->
+    <aside class="modal stopScreenShare hidden">
+      <div class="modal__box">
+        <h2 class="modal__text">화면공유는 한사람만 가능합니다🙏🏼</h2>
+        <button class="modal__btn">확인</button>
+      </div>
+    </aside>
+
+    <!-- 파일선택팝업 -->
+    <div id="select-file-dialog" style="display: none;">
+      <div id="dialog-content">
+        <div id="select-file">
+          <div id="label">Select a file:</div>
+          <input type="file" id="select-file-input">
+        </div>
+        <div id="dialog-footer">
+          <button id="ok-button" disabled>Ok</button>
+          <button id="cancel-button" class="cancel-button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 파일전송 성공, 실패 -->
+    <div class="alert alert-success" role="alert" style="display: none;">
+      <p>파일을 성공적으로 전송했습니다!</p>
+    </div>
+
+    <div class="alert alert-fail" role="alert" style="display: none;">
+      <p>파일 전송에 실패했습니다!</p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/public/js/app.js"></script>
+    <script type="module" src="/public/js/fileshare.js"></script>
+    <script type="module" src="/public/js/meeting.js"></script>ㅑ
+    
+  </main>
+  
+  <!-- 채팅시간노출을 위해 사용하는 moment라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
